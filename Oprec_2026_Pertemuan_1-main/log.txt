@@ -1,0 +1,636 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Farhan> docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+4f55086f7dd0: Pull complete
+d5e71e642bf5: Download complete
+Digest: sha256:452a468a4bf985040037cb6d5392410206e47db9bf5b7278d281f94d1c2d0931
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+PS C:\Users\Farhan> docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+689b91d88a0f: Pull complete
+b22f29e93d86: Download complete
+Digest: sha256:84e77dee7d1bc93fb029a45e3c6cb9d8aa4831ccfcc7103d36e876938d28895b
+Status: Downloaded newer image for ubuntu:latest
+root@3f67bcf12a1b:/# ls
+pwd
+whoami
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+/
+root
+root@3f67bcf12a1b:/# touch test.txt
+ls
+bin   dev  home  lib64  mnt  proc  run   srv  test.txt  usr
+boot  etc  lib   media  opt  root  sbin  sys  tmp       var
+root@3f67bcf12a1b:/# touch test.txt
+root@3f67bcf12a1b:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  test.txt  usr
+boot  etc  lib   media  opt  root  sbin  sys  tmp       var
+root@3f67bcf12a1b:/# exit
+exit
+PS C:\Users\Farhan> dir
+
+
+    Directory: C:\Users\Farhan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          9/1/2024   5:20 PM                .anaconda
+d-----        11/24/2025   2:31 PM                .antigravity
+d-----         1/23/2026  10:13 AM                .arduinoIDE
+d-----         4/14/2026  12:34 PM                .aws
+d-----         4/14/2026  12:34 PM                .azure
+d-----         12/3/2025   8:03 PM                .cache
+d-----         4/14/2026  12:45 PM                .cagent
+d-----         3/16/2026  12:31 PM                .codex
+d-----        11/10/2024   1:47 PM                .conda
+d-----         4/14/2026  12:45 PM                .config
+d-----          9/1/2024   5:20 PM                .continuum
+d-----         2/25/2026   1:46 PM                .copilot
+d-----        11/12/2024   6:09 PM                .dbclient
+d-----        10/18/2024   8:47 PM                .dbus-keyrings
+d-----         4/14/2026   1:01 PM                .docker
+d-----         4/14/2026  12:47 PM                .gemini
+d-----        10/24/2024   1:17 PM                .ipynb_checkpoints
+d-----          9/3/2024  11:35 AM                .ipython
+d-----          9/3/2024   5:37 AM                .jupyter
+d-----          4/6/2026   3:55 PM                .keras
+d-----         4/14/2026   1:03 PM                .lmstudio
+d-----         1/25/2025   1:29 PM                .matplotlib
+d-----        12/15/2025   2:13 PM                .ollama
+d-----          9/8/2025  10:54 AM                .platformio
+d-----         10/4/2025   1:17 PM                .ssh
+d-----         12/1/2025   4:18 PM                .streamlit
+d-----        10/27/2025   6:35 AM                .thumbnails
+d-----          9/1/2024   8:27 PM                .vscode
+da----        10/27/2025  10:25 PM                anaconda3
+d-r---        10/27/2025   1:34 PM                Contacts
+d-----          8/1/2025  10:05 PM                CrossDevice
+d-----        10/28/2025   4:29 AM                Desktop
+da----         9/10/2024  11:59 AM                Documents
+d-r---         4/14/2026  12:19 PM                Downloads
+d-r---        10/27/2025   1:34 PM                Favorites
+d-r---        10/27/2025   1:35 PM                Links
+d-----         3/17/2025   4:17 PM                modul-latihan-1-terminolo
+                                                  gi-graf-Mfarhan234
+d-r---        10/27/2025   1:35 PM                Music
+d-----         9/15/2024   9:42 AM                New folder
+d-----         9/15/2024   9:36 AM                New folder (2)
+dar--l         4/14/2026   1:02 PM                OneDrive
+d-r---        10/27/2025   1:35 PM                Saved Games
+d-----         3/15/2026   2:08 PM                scikit_learn_data
+d-r---        10/27/2025   1:34 PM                Searches
+d-----          4/6/2026   4:05 PM                tensorflow_datasets
+d-r---          2/1/2026   4:37 PM                Videos
+d-----         11/9/2024  10:43 AM                vmlogs
+-a----        10/28/2024   1:03 PM           6579 -1.14-windows.xml
+-a----          4/2/2026   8:26 AM             61 .bashrc
+-a----         4/11/2026  10:08 PM            561 .bash_history
+-a----          4/2/2026  10:55 AM             99 .bash_profile
+-a----          9/1/2024   5:20 PM             25 .condarc
+-a----         3/10/2025   8:42 PM            285 .gitconfig
+-a----        12/18/2025   8:12 AM             20 .lesshst
+-a----         4/29/2025   2:13 PM             25 .lmstudio-home-pointer
+-a----        11/10/2025  11:08 AM            162 .python_history
+-a----        10/28/2024   1:18 PM             41 inst.ini
+-a----        10/28/2024   1:18 PM             45 nuuid.ini
+-a----          9/3/2024  11:37 AM            958 Untitled.ipynb
+-a----        10/15/2024   3:21 PM              0 untitled.py
+-a----          9/3/2024  11:36 AM             72 Untitled1.ipynb
+-a----        10/15/2024   3:23 PM            617 Untitled2.ipynb
+-a----        10/24/2024   1:18 PM            617 Untitled3.ipynb
+-a----        10/24/2024   1:19 PM           3607 Untitled4.ipynb
+-a----        10/28/2024   1:18 PM             53 useruid.ini
+
+
+PS C:\Users\Farhan> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\Users\Farhan> docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                     PORTS     NAMES
+3f67bcf12a1b   ubuntu        "bash"     5 minutes ago   Exited (0) 3 minutes ago             objective_montalcini
+a33dc2db23ca   hello-world   "/hello"   6 minutes ago   Exited (0) 6 minutes ago             crazy_khayyam
+PS C:\Users\Farhan> docker run -d --name coba-nginx nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+448ea5cac5d5: Pull complete
+88d1d984b765: Pull complete
+7b5d674621c2: Pull complete
+5435b2dcdf5c: Pull complete
+054715a6bffa: Pull complete
+84e114c2bb36: Pull complete
+4a038fd18db1: Pull complete
+3eff0a97d435: Download complete
+cc0cf959117b: Download complete
+Digest: sha256:7f0adca1fc6c29c8dc49a2e90037a10ba20dc266baaed0988e9fb4d0d8b85ba0
+Status: Downloaded newer image for nginx:latest
+4fcc5e301ef8c23bbb2678fffd58490733039c01b952b227f7b3392df31c4104
+PS C:\Users\Farhan> docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS     NAMES
+4fcc5e301ef8   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp    coba-nginx
+PS C:\Users\Farhan> docker exec -it coba-nginx /bin/sh
+# ls
+bin   docker-entrypoint.d   home   media  proc  sbin  tmp
+boot  docker-entrypoint.sh  lib    mnt    root  srv   usr
+dev   etc                   lib64  opt    run   sys   var
+# nginx -v
+nginx version: nginx/1.29.8
+# exit
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug coba-nginx
+    Learn more at https://docs.docker.com/go/debug-cli/
+PS C:\Users\Farhan> docker stop coba-nginx
+coba-nginx
+PS C:\Users\Farhan> docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                      PORTS     NAMES
+4fcc5e301ef8   nginx         "/docker-entrypoint.…"   9 minutes ago    Exited (0) 38 seconds ago             coba-nginx
+3f67bcf12a1b   ubuntu        "bash"                   16 minutes ago   Exited (0) 14 minutes ago             objective_montalcini
+a33dc2db23ca   hello-world   "/hello"                 17 minutes ago   Exited (0) 17 minutes ago             crazy_khayyam
+PS C:\Users\Farhan> docker rm coba-nginx
+coba-nginx
+PS C:\Users\Farhan> docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+3f67bcf12a1b   ubuntu        "bash"     18 minutes ago   Exited (0) 17 minutes ago             objective_montalcini
+a33dc2db23ca   hello-world   "/hello"   20 minutes ago   Exited (0) 20 minutes ago             crazy_khayyam
+PS C:\Users\Farhan> docker image ls
+                                                        i Info →   U  In Use
+IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest   452a468a4bf9       25.9kB         9.49kB    U
+nginx:latest         7f0adca1fc6c        240MB         65.8MB
+ubuntu:latest        84e77dee7d1b        119MB         31.7MB    U
+PS C:\Users\Farhan> docker pull redis
+Using default tag: latest
+latest: Pulling from library/redis
+edc4b8e535e8: Pull complete
+387e0421c8da: Pull complete
+dbf833dfdfed: Pull complete
+4f4fb700ef54: Pull complete
+0d8ecf679ede: Pull complete
+e22d95bb4ed9: Pull complete
+048ce8724475: Download complete
+5eefc97b6afb: Download complete
+Digest: sha256:1f073813b641755b70b0200da64131bbeeb4ec5b633ca67772229b49820caafa
+Status: Downloaded newer image for redis:latest
+docker.io/library/redis:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview redis
+PS C:\Users\Farhan> docker image ls
+                                                        i Info →   U  In Use
+IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest   452a468a4bf9       25.9kB         9.49kB    U
+nginx:latest         7f0adca1fc6c        240MB         65.8MB
+redis:latest         1f073813b641        204MB         55.3MB
+ubuntu:latest        84e77dee7d1b        119MB         31.7MB    U
+PS C:\Users\Farhan> docker rmi redis
+Untagged: redis:latest
+Deleted: sha256:1f073813b641755b70b0200da64131bbeeb4ec5b633ca67772229b49820caafa
+PS C:\Users\Farhan> docker rmi ubuntu
+Error response from daemon: conflict: unable to delete ubuntu:latest (must be forced) - container 3f67bcf12a1b is using its referenced image 84e77dee7d1b
+PS C:\Users\Farhan> docker rm objective_montalcini
+objective_montalcini
+PS C:\Users\Farhan> docker rmi ubuntu
+Untagged: ubuntu:latest
+Deleted: sha256:84e77dee7d1bc93fb029a45e3c6cb9d8aa4831ccfcc7103d36e876938d28895b
+PS C:\Users\Farhan> mkdir docker-latihan
+
+
+    Directory: C:\Users\Farhan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/14/2026   1:34 PM                docker-latihan
+
+
+PS C:\Users\Farhan> cd docker-latihan
+PS C:\Users\Farhan\docker-latihan> echo "<h1>Hello dari Docker</h1>" > index.html
+PS C:\Users\Farhan\docker-latihan> type index.html
+<h1>Hello dari Docker</h1>
+PS C:\Users\Farhan\docker-latihan> notepad Dockerfile
+PS C:\Users\Farhan\docker-latihan> docker build -t latihan-nginx .
+[+] Building 0.2s (1/1) FINISHED                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.1s
+ => => transferring dockerfile: 2B                                     0.0s
+ERROR: failed to build: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+PS C:\Users\Farhan\docker-latihan> dir
+
+
+    Directory: C:\Users\Farhan\docker-latihan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/14/2026   1:37 PM              0 Dockerfile.txt
+-a----         4/14/2026   1:35 PM             58 index.html
+
+
+PS C:\Users\Farhan\docker-latihan> ren Dockerfile.txt Dockerfile
+PS C:\Users\Farhan\docker-latihan> dir
+
+
+    Directory: C:\Users\Farhan\docker-latihan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/14/2026   1:37 PM              0 Dockerfile
+-a----         4/14/2026   1:35 PM             58 index.html
+
+
+PS C:\Users\Farhan\docker-latihan> notepad Dockerfile
+PS C:\Users\Farhan\docker-latihan> type Dockerfile
+FROM nginx
+
+COPY index.html /usr/share/nginx/html
+PS C:\Users\Farhan\docker-latihan> docker build -t latihan-nginx .
+[+] Building 0.6s (7/7) FINISHED                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.0s
+ => => transferring dockerfile: 88B                                    0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest        0.1s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => [internal] load build context                                      0.0s
+ => => transferring context: 95B                                       0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:7f0adca1fc6c29c8  0.1s
+ => => resolve docker.io/library/nginx:latest@sha256:7f0adca1fc6c29c8  0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html                        0.0s
+ => exporting to image                                                 0.2s
+ => => exporting layers                                                0.1s
+ => => exporting manifest sha256:c436f7950f9fb72e361951f19476710901c3  0.0s
+ => => exporting config sha256:a4ecca3daf5476be81a6eb7c6d3848448c60cc  0.0s
+ => => exporting attestation manifest sha256:b8065555a2cea8a8531756ac  0.0s
+ => => exporting manifest list sha256:7ce6d99f7d95362358202619fadcb12  0.0s
+ => => naming to docker.io/library/latihan-nginx:latest                0.0s
+ => => unpacking to docker.io/library/latihan-nginx:latest             0.0s
+PS C:\Users\Farhan\docker-latihan> docker run -d -p 8080:80 latihan-nginx
+622fdb1d8b20b5ad629785653053446858ad1ee5ca19038b5ab23af50f98e9bc
+PS C:\Users\Farhan\docker-latihan> docker login
+Authenticating with existing credentials... [Username: mfarhan567]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+PS C:\Users\Farhan\docker-latihan> docker tag latihan-nginx mfarhan567/latihan-nginx
+PS C:\Users\Farhan\docker-latihan> docker image ls
+                                                        i Info →   U  In Use
+IMAGE                       ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest          452a468a4bf9       25.9kB         9.49kB    U
+latihan-nginx:latest        7ce6d99f7d95        237MB           63MB    U
+mfarhan567/latihan-nginx:latest
+                            7ce6d99f7d95        237MB           63MB    U
+nginx:latest                7f0adca1fc6c        240MB         65.8MB
+PS C:\Users\Farhan\docker-latihan> docker push mfarhan567/latihan-nginx
+Using default tag: latest
+The push refers to repository [docker.io/mfarhan567/latihan-nginx]
+66ba6a88804b: Pushed
+710ed145ef59: Pushed
+88d1d984b765: Mounted from library/nginx
+4a038fd18db1: Mounted from library/nginx
+84e114c2bb36: Mounted from library/nginx
+448ea5cac5d5: Mounted from library/nginx
+5435b2dcdf5c: Mounted from library/nginx
+7b5d674621c2: Mounted from library/nginx
+054715a6bffa: Mounted from library/nginx
+latest: digest: sha256:7ce6d99f7d95362358202619fadcb1278262ae2d437d6ca93b346beea7ca1585 size: 856
+PS C:\Users\Farhan\docker-latihan> notepad docker-compose.yml
+PS C:\Users\Farhan\docker-latihan> docker compose up -d
+time="2026-04-14T13:59:26+07:00" level=warning msg="C:\\Users\\Farhan\\docker-latihan\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] up 2/2
+ ✔ Network docker-latihan_default Created                               0.1s
+ ✔ Container docker-latihan-web-1 Started                               0.6s
+PS C:\Users\Farhan\docker-latihan> docker build -t flask-health .
+[+] Building 0.5s (7/7) FINISHED                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.0s
+ => => transferring dockerfile: 88B                                    0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest        0.1s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => [internal] load build context                                      0.0s
+ => => transferring context: 31B                                       0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:7f0adca1fc6c29c8  0.0s
+ => => resolve docker.io/library/nginx:latest@sha256:7f0adca1fc6c29c8  0.0s
+ => CACHED [2/2] COPY index.html /usr/share/nginx/html                 0.0s
+ => exporting to image                                                 0.1s
+ => => exporting layers                                                0.0s
+ => => exporting manifest sha256:c436f7950f9fb72e361951f19476710901c3  0.0s
+ => => exporting config sha256:a4ecca3daf5476be81a6eb7c6d3848448c60cc  0.0s
+ => => exporting attestation manifest sha256:eb22ab58f08c40c5c567939c  0.0s
+ => => exporting manifest list sha256:29e409e92ee07f943e3b453fdca6685  0.0s
+ => => naming to docker.io/library/flask-health:latest                 0.0s
+ => => unpacking to docker.io/library/flask-health:latest              0.0s
+PS C:\Users\Farhan\docker-latihan> type Dockerfile
+FROM nginx
+
+COPY index.html /usr/share/nginx/html
+PS C:\Users\Farhan\docker-latihan> cd C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main
+Set-Location : A positional parameter cannot be found that accepts
+argument 'ITS'.
+At line:1 char:1
++ cd C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Op ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location], Paramet
+   erBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerS
+   hell.Commands.SetLocationCommand
+
+PS C:\Users\Farhan\docker-latihan> dir
+
+
+    Directory: C:\Users\Farhan\docker-latihan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/14/2026   1:58 PM             99 docker-compose.yml
+-a----         4/14/2026   1:44 PM             51 Dockerfile
+-a----         4/14/2026   1:35 PM             58 index.html
+
+
+PS C:\Users\Farhan\docker-latihan> cd "C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main"
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> dir
+
+
+    Directory: C:\Kuliah ITS Farhan\Semester
+    4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/13/2026   8:25 PM                img
+d-----         4/13/2026   8:25 PM                latihan-dockerfile
+-a----         4/14/2026   2:03 PM            210 app.py
+-a----         4/14/2026   2:05 PM            140 Dockerfile
+-a----         4/13/2026   8:25 PM          33908 README.md
+-a----         4/14/2026   2:04 PM              5 requirements.txt
+
+
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker build -t flask-health .
+[+] Building 28.5s (11/11) FINISHED                    docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.0s
+ => => transferring dockerfile: 179B                                   0.0s
+ => [internal] load metadata for docker.io/library/python:3.9-slim     4.4s
+ => [auth] library/python:pull token for registry-1.docker.io          0.0s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16  15.6s
+ => => resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16b  0.0s
+ => => sha256:fc74430849022d13b0d44b8969a953f842f59 13.88MB / 13.88MB  3.8s
+ => => sha256:ea56f685404adf81680322f152d2cfec62115b30dda 251B / 251B  1.4s
+ => => sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfe 1.29MB / 1.29MB  3.0s
+ => => sha256:38513bd7256313495cdd83b3b0915a633cfa 29.78MB / 29.78MB  14.0s
+ => => extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a0  0.8s
+ => => extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9  0.1s
+ => => extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a  0.5s
+ => => extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda4  0.0s
+ => [internal] load build context                                      0.2s
+ => => transferring context: 2.06MB                                    0.1s
+ => [2/5] WORKDIR /app                                                 0.1s
+ => [3/5] COPY requirements.txt .                                      0.0s
+ => [4/5] RUN pip install -r requirements.txt                          7.1s
+ => [5/5] COPY . .                                                     0.0s
+ => exporting to image                                                 1.0s
+ => => exporting layers                                                0.6s
+ => => exporting manifest sha256:f9d3c62d681f2fc2fd4d4f2054552bc11611  0.0s
+ => => exporting config sha256:d4f912b744a7d29d16315418a33102d852d623  0.0s
+ => => exporting attestation manifest sha256:d7e990772d1201240e4ed2bf  0.0s
+ => => exporting manifest list sha256:cc813284d1e603b268a117de97d5579  0.0s
+ => => naming to docker.io/library/flask-health:latest                 0.0s
+ => => unpacking to docker.io/library/flask-health:latest              0.3s
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker run -d -p 8000:8000 flask-health
+eca461026baeefa6e0efcfb83da478c2aecda1c10cd41b6050693e5533cd4e1e
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> curl -i http://localhost:8000/health
+
+cmdlet Invoke-WebRequest at command pipeline position 1
+Supply values for the following parameters:
+Uri: curl.exe -i http://localhost:8000/health
+curl : Cannot find drive. A drive with the name 'http' does not exist.
+At line:1 char:1
++ curl -i http://localhost:8000/health
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (http:String) [Invoke-WebReq
+   uest], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound,Microsoft.PowerShell.Commands.
+   InvokeWebRequestCommand
+
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> curl.exe -i http://localhost:8000/health
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.8 Python/3.9.25
+Date: Tue, 14 Apr 2026 07:12:36 GMT
+Content-Type: application/json
+Content-Length: 16
+Connection: close
+
+{"status":"ok"}
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker build -t flask-health .
+[+] Building 2.4s (11/11) FINISHED                     docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.0s
+ => => transferring dockerfile: 179B                                   0.0s
+ => [internal] load metadata for docker.io/library/python:3.9-slim     1.7s
+ => [auth] library/python:pull token for registry-1.docker.io          0.0s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16b  0.0s
+ => => resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16b  0.0s
+ => [internal] load build context                                      0.0s
+ => => transferring context: 1.13kB                                    0.0s
+ => CACHED [2/5] WORKDIR /app                                          0.0s
+ => CACHED [3/5] COPY requirements.txt .                               0.0s
+ => CACHED [4/5] RUN pip install -r requirements.txt                   0.0s
+ => [5/5] COPY . .                                                     0.0s
+ => exporting to image                                                 0.3s
+ => => exporting layers                                                0.1s
+ => => exporting manifest sha256:7ac8417d663807ba87c6b9ac827dbf5dd652  0.0s
+ => => exporting config sha256:04fcd3a96e1f6427a294470d06af928854e2f3  0.0s
+ => => exporting attestation manifest sha256:35db4a2a74a9508765e16ad3  0.0s
+ => => exporting manifest list sha256:de62ba492b42f01d04cac7e70ce4883  0.0s
+ => => naming to docker.io/library/flask-health:latest                 0.0s
+ => => unpacking to docker.io/library/flask-health:latest              0.1s
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker run -d -p 8001:8000 flask-health
+4e8f4048341cd7196275013a3bcc65f05672b4a719eca1c72b24208b6c6ece03
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker build -t flask-health .
+[+] Building 1.5s (10/10) FINISHED                     docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.0s
+ => => transferring dockerfile: 179B                                   0.0s
+ => [internal] load metadata for docker.io/library/python:3.9-slim     1.1s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => [internal] load build context                                      0.0s
+ => => transferring context: 1.28kB                                    0.0s
+ => [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16b  0.0s
+ => => resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16b  0.0s
+ => CACHED [2/5] WORKDIR /app                                          0.0s
+ => CACHED [3/5] COPY requirements.txt .                               0.0s
+ => CACHED [4/5] RUN pip install -r requirements.txt                   0.0s
+ => [5/5] COPY . .                                                     0.0s
+ => exporting to image                                                 0.2s
+ => => exporting layers                                                0.1s
+ => => exporting manifest sha256:f5c0c3120bb4e0d1197a1fcd0a3a69961ce4  0.0s
+ => => exporting config sha256:c75a5889d6de586593c19972b9110aea6a9c68  0.0s
+ => => exporting attestation manifest sha256:e4ddc78f9c98e332a9b8a8d9  0.0s
+ => => exporting manifest list sha256:da2dd8a0c471933cf6ef20242d3a603  0.0s
+ => => naming to docker.io/library/flask-health:latest                 0.0s
+ => => unpacking to docker.io/library/flask-health:latest              0.0s
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker run -d -p 8002:8000 flask-health
+2b65cbdb38ca780c4b1bb1d84ca96b87ac0b47365f327bbb393cf8864d8586a4
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker logs 2b65cbdb38ca
+ * Serving Flask app 'app'
+ * Debug mode: off
+INFO:werkzeug:WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.17.0.5:8000
+INFO:werkzeug:Press CTRL+C to quit
+INFO:app:Health endpoint accessed
+INFO:werkzeug:172.17.0.1 - - [14/Apr/2026 07:17:51] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Apr/2026 07:17:51] "GET /favicon.ico HTTP/1.1" 404 -
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker compose up -d
+#1 [internal] load local bake definitions
+#1 reading from stdin 675B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 179B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.9-slim
+#4 DONE 1.8s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 1.39kB done
+#6 DONE 0.0s
+
+#7 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+#7 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 0.0s done
+#7 DONE 0.0s
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [3/5] COPY requirements.txt .
+#9 CACHED
+
+#10 [4/5] RUN pip install -r requirements.txt
+#10 CACHED
+
+#11 [5/5] COPY . .
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers 0.1s done
+#12 exporting manifest sha256:dd42694345f0d11290f7c624138bb5e9f98c8a482d988f4abdce945425038bea 0.0s done
+#12 exporting config sha256:d48d0c01594d0991a2e8cad051fa2973703069616febb32b3002db55b7afbc62 0.0s done
+#12 exporting attestation manifest sha256:54e1cfae4ec21859fb7cbe64057c061f91f093cd71716d247bab9bf159db485a 0.0s done
+#12 exporting manifest list sha256:68904d41d82012217bd3b08b05f657bb65ff9506772aa8b471c44cc3413a4ee1 0.0s done
+#12 naming to docker.io/library/oprec_2026_pertemuan_1-main-api:latest done
+#12 unpacking to docker.io/library/oprec_2026_pertemuan_1-main-api:latest 0.0s done
+#12 DONE 0.3s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+[+] up 3/3
+ ✔ Image oprec_2026_pertemuan_1-main-api       Built                    3.0s
+ ✔ Network oprec_2026_pertemuan_1-main_default Created                  0.1s
+ ✔ Container oprec_2026_pertemuan_1-main-api-1 Started                  0.4s
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker tag oprec_2026_pertemuan_1-main-api mfarhan567/flask-health
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker push mfarhan567/flask-health
+Using default tag: latest
+The push refers to repository [docker.io/mfarhan567/flask-health]
+f3b88752d60e: Pushed
+99a020f6d014: Pushed
+99e4f16ecc8c: Pushed
+ea56f685404a: Pushed
+b3ec39b36ae8: Pushed
+7e6d147d908c: Pushed
+fc7443084902: Pushed
+8aac00c9e6a0: Pushed
+38513bd72563: Pushed
+latest: digest: sha256:68904d41d82012217bd3b08b05f657bb65ff9506772aa8b471c44cc3413a4ee1 size: 856
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker compose down
+[+] down 2/2
+ ✔ Container oprec_2026_pertemuan_1-main-api-1 Removed                  1.4s
+ ✔ Network oprec_2026_pertemuan_1-main_default Removed                  0.3s
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker rm -f $(docker ps -aq)
+2b65cbdb38ca
+4e8f4048341c
+eca461026bae
+6d85066f68d0
+622fdb1d8b20
+a33dc2db23ca
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker rmi mfarhan567/flask-health
+Untagged: mfarhan567/flask-health:latest
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker image ls
+                                                        i Info →   U  In Use
+IMAGE                       ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-health:latest         da2dd8a0c471        207MB         51.6MB
+hello-world:latest          452a468a4bf9       25.9kB         9.49kB
+latihan-nginx:latest        7ce6d99f7d95        237MB           63MB
+mfarhan567/latihan-nginx:latest
+                            7ce6d99f7d95        237MB           63MB
+nginx:latest                7f0adca1fc6c        240MB         65.8MB
+oprec_2026_pertemuan_1-main-api:latest
+                            68904d41d820        207MB         51.6MB
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker rmi flask-health oprec_2026_pertemuan_1-main-api
+Untagged: flask-health:latest
+Deleted: sha256:da2dd8a0c471933cf6ef20242d3a60379eef02cfe3095f823c945bd5f9b18178
+Untagged: oprec_2026_pertemuan_1-main-api:latest
+Deleted: sha256:68904d41d82012217bd3b08b05f657bb65ff9506772aa8b471c44cc3413a4ee1
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker pull mfarhan567/flask-health
+Using default tag: latest
+latest: Pulling from mfarhan567/flask-health
+99a020f6d014: Pull complete
+8aac00c9e6a0: Pull complete
+99e4f16ecc8c: Pull complete
+7e6d147d908c: Pull complete
+f3b88752d60e: Download complete
+Digest: sha256:68904d41d82012217bd3b08b05f657bb65ff9506772aa8b471c44cc3413a4ee1
+Status: Downloaded newer image for mfarhan567/flask-health:latest
+docker.io/mfarhan567/flask-health:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview mfarhan567/flask-health
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> docker run -d -p 9000:8000 mfarhan567/flask-health
+12e8771c2b209a2313f9932debe04df0b69f4b182755dc093f5a7d839043eaee
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main> Start-Transcript -Path deployment-log.txt
+Transcript started, output file is deployment-log.txt
+PS C:\Kuliah ITS Farhan\Semester 4\Admin_Lab\NCC\NCC_Docker_Farhan\Oprec_2026_Pertemuan_1-main>
